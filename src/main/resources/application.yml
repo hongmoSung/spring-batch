@@ -1,11 +1,13 @@
 spring:
   datasource:
     hikari:
-      jdbc-url: jdbc:mysql://localhost:3306/blog
-      username: root
+      jdbc-url: jdbc:mysql://localhost:3306/docswave
+      username: docswave
       password: 1234
       driver-class-name: org.mariadb.jdbc.Driver
 
   batch:
     jdbc:
       initialize-schema: always
+    job:
+      enabled: false
