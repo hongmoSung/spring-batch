@@ -9,7 +9,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 @RequiredArgsConstructor
 public class JobRunner implements ApplicationRunner {
 
@@ -18,9 +18,9 @@ public class JobRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-//        JobParameters jobParameters = new JobParametersBuilder()
-//                .addString("name", "user2")
-//                .toJobParameters();
-//        jobLauncher.run(job, jobParameters);
+        JobParameters jobParameters = new JobParametersBuilder()
+                .addString("name", "user2")
+                .toJobParameters();
+        jobLauncher.run(job, jobParameters);
     }
 }

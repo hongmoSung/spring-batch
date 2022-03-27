@@ -32,17 +32,22 @@ public class JobInstanceConfig {
     private Step step1() {
         return stepBuilderFactory.get("step1")
                 .tasklet((contribution, chunkContext) -> {
+                    log.info("step1 start!");
                     JobParameters jobParameters = contribution.getStepExecution().getJobExecution().getJobParameters();
                     Map<String, Object> jobParameters1 = chunkContext.getStepContext().getJobParameters();
                     for (String s : jobParameters1.keySet()) {
                         log.info(s);
                     }
+//                    throw new RuntimeException("step1 has failed");
                     return RepeatStatus.FINISHED;
                 }).build();
     }
 
     private Step step2() {
         return stepBuilderFactory.get("step2")
-                .tasklet((contribution, chunkContext) -> RepeatStatus.FINISHED).build();
+                .tasklet((contribution, chunkContext) -> {
+                    log.info("step2 start!");
+                    return RepeatStatus.FINISHED;
+                }).build();
     }
 }
