@@ -4,6 +4,7 @@ import io.springbatch.springbatchlecture.jobparams.CustomTask;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -21,12 +22,14 @@ public class JobInstanceConfig {
 
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
+    private final JobExecutionListener jobExecutionListener;
 
     @Bean
     public Job job() {
         return jobBuilderFactory.get("job")
                 .start(step1())
                 .next(step2())
+                .listener(jobExecutionListener)
                 .build();
     }
 
