@@ -1,12 +1,13 @@
 package io.springbatch.springbatchlecture.config;
 
+import io.springbatch.springbatchlecture.jobparams.CustomTask;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.batch.core.*;
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobParameters;
+import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.core.scope.context.ChunkContext;
-import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,16 +32,8 @@ public class JobInstanceConfig {
 
     private Step step1() {
         return stepBuilderFactory.get("step1")
-                .tasklet((contribution, chunkContext) -> {
-                    log.info("step1 start!");
-                    JobParameters jobParameters = contribution.getStepExecution().getJobExecution().getJobParameters();
-                    Map<String, Object> jobParameters1 = chunkContext.getStepContext().getJobParameters();
-                    for (String s : jobParameters1.keySet()) {
-                        log.info(s);
-                    }
-//                    throw new RuntimeException("step1 has failed");
-                    return RepeatStatus.FINISHED;
-                }).build();
+                .tasklet(new CustomTask())
+                .build();
     }
 
     private Step step2() {
