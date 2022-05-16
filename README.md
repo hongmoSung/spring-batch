@@ -17,8 +17,8 @@
       2)</a>
 - [ ] 섹션 3. 스프링 배치 도메인 이해
     - [x] 목차 소개
-    - [ ] <<a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/job.md">Job</a>
-    - [ ] JobInstance
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/job.md">Job</a>
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobinstance.md">JobInstance</a>
     - [ ] JobParameter
     - [ ] JobExecution
     - [ ] Step
