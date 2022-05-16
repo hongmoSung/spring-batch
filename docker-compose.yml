@@ -10,13 +10,9 @@ services:
       - "127.0.0.1:3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=1234
-      - MYSQL_DATABASE=blog
-      - MYSQL_USER=blog
+      - MYSQL_DATABASE=batch
+      - MYSQL_USER=batch
       - MYSQL_PASSWORD=1234
     command:
       - --character-set-server=utf8
       - --collation-server=utf8_unicode_ci
-  redis:
-    image: redis
-    ports:
-      - "127.0.0.1:6379:6379"
