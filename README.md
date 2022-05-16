@@ -19,7 +19,7 @@
     - [x] 목차 소개
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/job.md">Job</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobinstance.md">JobInstance</a>
-    - [ ] JobParameter
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobParameter.md">JobParameter</a>
     - [ ] JobExecution
     - [ ] Step
     - [ ] StepExecution
