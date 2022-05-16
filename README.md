@@ -9,7 +9,8 @@
     - [x] 목차 소개
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section02/spring-batch-start.md">프로젝트 구성 및
       의존성 설정<a>
-    - [ ] Hello Spring Batch 시작하기
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section02/hello-batch.md">Hello
+      Spring Batch 시작하기</a>
     - [ ] DB 스키마 생성 및 이해 (1)
     - [ ] DB 스키마 생성 및 이해 (2)
 - [ ] 섹션 3. 스프링 배치 도메인 이해
