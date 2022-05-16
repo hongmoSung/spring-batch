@@ -22,7 +22,8 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobParameter.md">JobParameter</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobExcution.md">JobExecution</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/step.md">Step</a>
-    - [ ] StepExecution
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/stepExecution.md">
+      StepExecution</a>
     - [ ] StepContribution
     - [ ] ExecutionContext
     - [ ] JobRepository
