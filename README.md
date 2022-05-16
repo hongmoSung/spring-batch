@@ -16,8 +16,8 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section02/db-shema.md">DB 스키마 생성 및 이해 (
       2)</a>
 - [ ] 섹션 3. 스프링 배치 도메인 이해
-    - [ ] 목차 소개
-    - [ ] Job
+    - [x] 목차 소개
+    - [ ] <<a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/job.md">Job</a>
     - [ ] JobInstance
     - [ ] JobParameter
     - [ ] JobExecution
