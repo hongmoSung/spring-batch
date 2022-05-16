@@ -40,8 +40,9 @@ public class JobInstanceConfiguration {
     @Bean
     public Step step2() {
         return stepBuilderFactory.get("step2")
-                .tasklet((contribution, chunkContext) -> RepeatStatus.FINISHED).build();
+                .tasklet((contribution, chunkContext) -> {
+                    throw new RuntimeException("step2 failed");
+                }).build();
     }
-
 
 }
