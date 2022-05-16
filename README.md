@@ -3,11 +3,12 @@
 - [x] 섹션 0. 강좌 소개
     - [x] 서론
     - [x] 목차 / 개발 환경 및 선수 지식
-- [ ] 섹션 1. 스프링 배치 소개
-    - [ ] 개요 및 아키텍처
+- [x] 섹션 1. 스프링 배치 소개
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section01/archi.md">개요 및 아키텍처</a>
 - [ ] 섹션 2. 스프링 배치 시작
-    - [ ] 목차 소개
-    - [ ] 프로젝트 구성 및 의존성 설정
+    - [x] 목차 소개
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section02/spring-batch-start.md">프로젝트 구성 및
+      의존성 설정<a>
     - [ ] Hello Spring Batch 시작하기
     - [ ] DB 스키마 생성 및 이해 (1)
     - [ ] DB 스키마 생성 및 이해 (2)
