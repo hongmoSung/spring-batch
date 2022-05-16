@@ -26,7 +26,7 @@
       StepExecution</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/stepContribution.md">
       StepContribution</a>
-    - [ ] ExecutionContext
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/executionContext.md">ExecutionContext</a>
     - [ ] JobRepository
     - [ ] JobLauncher
 - [ ] 섹션 4. 스프링 배치 실행 - Job
