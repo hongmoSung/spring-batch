@@ -1,4 +1,4 @@
-package io.springbatch.springbatchlecture.config;
+package io.springbatch.springbatchlecture;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,17 +22,18 @@ public class JobRepositoryListener implements JobExecutionListener {
     public void afterJob(JobExecution jobExecution) {
         String jobName = jobExecution.getJobInstance().getJobName();
         JobParameters jobParameters = new JobParametersBuilder()
-                .addString("name", "user1").toJobParameters();
-
+                .addString("requestDate", "20220516").toJobParameters();
         JobExecution lastJobExecution = jobRepository.getLastJobExecution(jobName, jobParameters);
-        if (lastJobExecution != null) {
-            for (StepExecution execution : lastJobExecution.getStepExecutions()) {
-                BatchStatus status = execution.getStatus();
+
+        if (jobExecution != null) {
+            for (StepExecution stepExecution : lastJobExecution.getStepExecutions()) {
+                BatchStatus status = stepExecution.getStatus();
                 log.info("status = {}", status);
-                ExitStatus exitStatus = execution.getExitStatus();
+                ExitStatus exitStatus = stepExecution.getExitStatus();
                 log.info("exitStatus = {}", exitStatus);
-                String stepName = execution.getStepName();
+                String stepName = stepExecution.getStepName();
                 log.info("stepName = {}", stepName);
+
             }
         }
     }

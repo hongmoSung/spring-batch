@@ -7,6 +7,7 @@ import io.springbatch.springbatchlecture.ExecutionContextTasklet4;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
@@ -24,14 +25,16 @@ public class JobInstanceConfiguration {
     private final ExecutionContextTasklet2 executionContextTasklet2;
     private final ExecutionContextTasklet3 executionContextTasklet3;
     private final ExecutionContextTasklet4 executionContextTasklet4;
+    private final JobExecutionListener jobRepositoryListener;
 
     @Bean
     public Job job() {
         return jobBuilderFactory.get("job")
                 .start(step1())
                 .next(step2())
-                .next(step3())
-                .next(step4())
+//                .next(step3())
+//                .next(step4())
+                .listener(jobRepositoryListener)
                 .build();
     }
 

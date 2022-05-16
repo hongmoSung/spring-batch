@@ -1,6 +1,5 @@
 package io.springbatch.springbatchlecture.config;
 
-
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.repository.support.JobRepositoryFactoryBean;
 import org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer;
@@ -10,18 +9,19 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
-//@Configuration
-public class CustomBatchConfig extends BasicBatchConfigurer {
+@Configuration
+public class CustomBatchConfigurer extends BasicBatchConfigurer {
 
     private final DataSource dataSource;
 
-    protected CustomBatchConfig(BatchProperties properties, DataSource dataSource, TransactionManagerCustomizers transactionManagerCustomizers) {
+    protected CustomBatchConfigurer(BatchProperties properties, DataSource dataSource, TransactionManagerCustomizers transactionManagerCustomizers, DataSource dataSource1) {
         super(properties, dataSource, transactionManagerCustomizers);
-        this.dataSource = dataSource;
+        this.dataSource = dataSource1;
     }
 
     @Override
     protected JobRepository createJobRepository() throws Exception {
+
         JobRepositoryFactoryBean factory = new JobRepositoryFactoryBean();
         factory.setDataSource(dataSource);
         factory.setTransactionManager(getTransactionManager());
