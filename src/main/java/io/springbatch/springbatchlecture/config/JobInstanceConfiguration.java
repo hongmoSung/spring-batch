@@ -1,5 +1,6 @@
 package io.springbatch.springbatchlecture.config;
 
+import io.springbatch.springbatchlecture.CustomTasklet;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
@@ -40,9 +41,8 @@ public class JobInstanceConfiguration {
     @Bean
     public Step step2() {
         return stepBuilderFactory.get("step2")
-                .tasklet((contribution, chunkContext) -> {
-                    throw new RuntimeException("step2 failed");
-                }).build();
+                .tasklet(new CustomTasklet())
+                .build();
     }
 
 }

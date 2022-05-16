@@ -21,7 +21,7 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobinstance.md">JobInstance</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobParameter.md">JobParameter</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobExcution.md">JobExecution</a>
-    - [ ] Step
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/step.md">Step</a>
     - [ ] StepExecution
     - [ ] StepContribution
     - [ ] ExecutionContext
