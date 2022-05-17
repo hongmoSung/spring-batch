@@ -36,7 +36,8 @@
     - [x] 목차 소개
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/init.md">배치 초기화 설정</a>
     - [x] Job and Step 소개
-    - [ ] JobBuilderFactory
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/job-builder.md">
+      JobBuilderFactory</a>
     - [ ] SimpleJob - 개념 및 API 소개
     - [ ] SimpleJob - start() / next()
     - [ ] SimpleJob - validator()
