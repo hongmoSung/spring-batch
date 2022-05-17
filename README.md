@@ -33,8 +33,8 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobLauncher.md.md">
       JobLauncher</a>
 - [ ] 섹션 4. 스프링 배치 실행 - Job
-    - [ ] 목차 소개
-    - [ ] 배치 초기화 설정
+    - [x] 목차 소개
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/init.md">배치 초기화 설정</a>
     - [ ] Job and Step 소개
     - [ ] JobBuilderFactory
     - [ ] SimpleJob - 개념 및 API 소개

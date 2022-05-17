@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 @Slf4j
 @Configuration
 @RequiredArgsConstructor
-public class JobInstanceConfiguration {
+public class JobInstanceConfiguration2 {
 
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
@@ -28,27 +28,28 @@ public class JobInstanceConfiguration {
     private final JobExecutionListener jobRepositoryListener;
 
     @Bean
-    public Job job() {
-        return jobBuilderFactory.get("job1")
-                .start(step1())
-                .next(step2())
+    public Job job2() {
+        return jobBuilderFactory.get("job2")
+                .start(step3())
+//                .start(step1())
+//                .next(step2())
 //                .next(step3())
-//                .next(step4())
+                .next(step4())
                 .listener(jobRepositoryListener)
                 .build();
     }
 
     @Bean
-    public Step step1() {
-        return stepBuilderFactory.get("step1")
-                .tasklet(executionContextTasklet1)
+    public Step step3() {
+        return stepBuilderFactory.get("step3")
+                .tasklet(executionContextTasklet3)
                 .build();
     }
 
     @Bean
-    public Step step2() {
-        return stepBuilderFactory.get("step2")
-                .tasklet(executionContextTasklet2)
+    public Step step4() {
+        return stepBuilderFactory.get("step4")
+                .tasklet(executionContextTasklet4)
                 .build();
     }
 
