@@ -40,7 +40,7 @@
       JobBuilderFactory</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/simple-job.md">SimpleJob - 개념 및
       API 소개</a>
-    - [ ] SimpleJob - start() / next()
+    - [x] SimpleJob - start() / next()
     - [ ] SimpleJob - validator()
     - [ ] SimpleJob - preventRestart()
     - [ ] SimpleJob - incrementer()
