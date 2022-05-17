@@ -43,7 +43,8 @@
     - [x] SimpleJob - start() / next()
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/validator.md">SimpleJob -
       validator()</a>
-    - [ ] SimpleJob - preventRestart()
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/prevent-restart.md">SimpleJob -
+      preventRestart()</a>
     - [ ] SimpleJob - incrementer()
     - [ ] SimpleJob 아키텍처
 - [ ] 섹션 5. 스프링 배치 실행 - Step

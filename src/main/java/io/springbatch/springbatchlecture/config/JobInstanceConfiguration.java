@@ -38,7 +38,8 @@ public class JobInstanceConfiguration {
 //                .next(step4())
 //                .listener(jobRepositoryListener)
 //                .validator(new CustomJobParameterValidator())
-                .validator(new DefaultJobParametersValidator(new String[]{"name", "date"}, new String[]{"count"}))
+//                .validator(new DefaultJobParametersValidator(new String[]{"name", "date"}, new String[]{"count"}))
+                .preventRestart()
                 .build();
     }
 
