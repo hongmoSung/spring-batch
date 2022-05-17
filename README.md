@@ -32,7 +32,7 @@
       JobRepository</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobLauncher.md.md">
       JobLauncher</a>
-- [ ] 섹션 4. 스프링 배치 실행 - Job
+- [x] 섹션 4. 스프링 배치 실행 - Job
     - [x] 목차 소개
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/init.md">배치 초기화 설정</a>
     - [x] Job and Step 소개
@@ -45,8 +45,10 @@
       validator()</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/prevent-restart.md">SimpleJob -
       preventRestart()</a>
-    - [ ] SimpleJob - incrementer()
-    - [ ] SimpleJob 아키텍처
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/incrementer.md">SimpleJob -
+      incrementer()</a>
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/simple-job.mda">SimpleJob
+      아키텍처</a>
 - [ ] 섹션 5. 스프링 배치 실행 - Step
     - [ ] StepBuilderFactory
     - [ ] TaskletStep - 개념 및 API 소개
