@@ -1,9 +1,6 @@
 package io.springbatch.springbatchlecture.config;
 
-import io.springbatch.springbatchlecture.ExecutionContextTasklet1;
-import io.springbatch.springbatchlecture.ExecutionContextTasklet2;
-import io.springbatch.springbatchlecture.ExecutionContextTasklet3;
-import io.springbatch.springbatchlecture.ExecutionContextTasklet4;
+import io.springbatch.springbatchlecture.*;
 import io.springbatch.springbatchlecture.validator.CustomJobParameterValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -39,7 +36,8 @@ public class JobInstanceConfiguration {
 //                .listener(jobRepositoryListener)
 //                .validator(new CustomJobParameterValidator())
 //                .validator(new DefaultJobParametersValidator(new String[]{"name", "date"}, new String[]{"count"}))
-                .preventRestart()
+//                .preventRestart()
+                .incrementer(new CustomJobParametersIncrementer())
                 .build();
     }
 
