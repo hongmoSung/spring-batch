@@ -1,5 +1,6 @@
 package io.springbatch.springbatchlecture.controller;
 
+import io.springbatch.springbatchlecture.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParameters;
@@ -29,14 +30,17 @@ public class JobLauncherController {
 
     @PostMapping("/batch")
     public String launch(@RequestBody Member member) throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
-
-        JobParameters jobParameters = new JobParametersBuilder().addString("id", member.getId())
+        JobParameters jobParameters = new JobParametersBuilder()
+                .addString("id", member.getId())
                 .addDate("date", new Date())
                 .toJobParameters();
-
-        SimpleJobLauncher jobLauncher = (SimpleJobLauncher) basicBatchConfigurer.getJobLauncher();
-        jobLauncher.setTaskExecutor(new SimpleAsyncTaskExecutor());
-        jobLauncher.run(job, jobParameters);
-        return "batch completed";
+        // 동기
+//        jobLauncher.run(job, jobParameters);
+        // 비동기
+        SimpleJobLauncher launcher = (SimpleJobLauncher) basicBatchConfigurer.getJobLauncher();
+        launcher.setTaskExecutor(new SimpleAsyncTaskExecutor ());
+        launcher.run(job, jobParameters);
+        return "batch complete";
     }
+
 }

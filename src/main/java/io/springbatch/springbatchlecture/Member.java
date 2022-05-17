@@ -1,7 +1,6 @@
-package io.springbatch.springbatchlecture.controller;
+package io.springbatch.springbatchlecture;
 
 import lombok.Data;
-
 
 @Data
 public class Member {

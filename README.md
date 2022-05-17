@@ -30,7 +30,8 @@
       ExecutionContext</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobRepository.md">
       JobRepository</a>
-    - [ ] JobLauncher
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobLauncher.md.md">
+      JobLauncher</a>
 - [ ] 섹션 4. 스프링 배치 실행 - Job
     - [ ] 목차 소개
     - [ ] 배치 초기화 설정
