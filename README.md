@@ -41,7 +41,8 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/simple-job.md">SimpleJob - 개념 및
       API 소개</a>
     - [x] SimpleJob - start() / next()
-    - [ ] SimpleJob - validator()
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/validator.md">SimpleJob -
+      validator()</a>
     - [ ] SimpleJob - preventRestart()
     - [ ] SimpleJob - incrementer()
     - [ ] SimpleJob 아키텍처
