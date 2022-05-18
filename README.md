@@ -54,7 +54,8 @@
       StepBuilderFactory</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/tasklet-step.md">TaskletStep - 개념
       및 API 소개</a>
-    - [ ] TaskletStep - tasklet()
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/tasklet-api.md">TaskletStep -
+      tasklet()</a>
     - [ ] TaskletStep - startLimit() / allowStartIfComplete()
     - [ ] TaskletStep 아키텍처
     - [ ] JobStep
