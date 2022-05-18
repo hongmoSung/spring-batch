@@ -34,23 +34,24 @@
       JobLauncher</a>
 - [x] 섹션 4. 스프링 배치 실행 - Job
     - [x] 목차 소개
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/init.md">배치 초기화 설정</a>
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section04/init.md">배치 초기화 설정</a>
     - [x] Job and Step 소개
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/job-builder.md">
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section04/job-builder.md">
       JobBuilderFactory</a>
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/simple-job.md">SimpleJob - 개념 및
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section04/simple-job.md">SimpleJob - 개념 및
       API 소개</a>
     - [x] SimpleJob - start() / next()
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/validator.md">SimpleJob -
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section04/validator.md">SimpleJob -
       validator()</a>
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/prevent-restart.md">SimpleJob -
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section04/prevent-restart.md">SimpleJob -
       preventRestart()</a>
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/incrementer.md">SimpleJob -
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section04/incrementer.md">SimpleJob -
       incrementer()</a>
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/simple-job.mda">SimpleJob
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section04/simple-job.md">SimpleJob
       아키텍처</a>
 - [ ] 섹션 5. 스프링 배치 실행 - Step
-    - [ ] StepBuilderFactory
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/simple-job.mda">
+      StepBuilderFactory</a>
     - [ ] TaskletStep - 개념 및 API 소개
     - [ ] TaskletStep - tasklet()
     - [ ] TaskletStep - startLimit() / allowStartIfComplete()
