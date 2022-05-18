@@ -28,8 +28,10 @@
     - exitCode 속성으로 참조
     - <img src="../../images/section06/exit-status.png" alt="exit-status">
 - FlowExecutionStatus
-  - FlowExecution 의 속성으로 Flow 의 실행 후 최종 결과 상태가 무엇인지 정의
-  - Flow 내 Step 이 실행되고 나서 ExitStatus 값을 FlowExecutionStatus 값으로 저장
-  - FlowJob 의 배치 결과 상태에 관여함
-  - COMPLETED, STOPPED, FAILED, UNKNOWN
-  - <img src="../../images/section06/flow-execution-status.png" alt="flow-execution-status">
+    - FlowExecution 의 속성으로 Flow 의 실행 후 최종 결과 상태가 무엇인지 정의
+    - Flow 내 Step 이 실행되고 나서 ExitStatus 값을 FlowExecutionStatus 값으로 저장
+    - FlowJob 의 배치 결과 상태에 관여함
+    - COMPLETED, STOPPED, FAILED, UNKNOWN
+    - <img src="../../images/section06/flow-execution-status.png" alt="flow-execution-status">
+
+<img src="../../images/section06/transition-flow.png" alt="transition-flow">
