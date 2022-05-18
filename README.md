@@ -50,9 +50,10 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section04/simple-job.md">SimpleJob
       아키텍처</a>
 - [ ] 섹션 5. 스프링 배치 실행 - Step
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/simple-job.mda">
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/step-builder-factory.md">
       StepBuilderFactory</a>
-    - [ ] TaskletStep - 개념 및 API 소개
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/tasklet-step.md">TaskletStep - 개념
+      및 API 소개</a>
     - [ ] TaskletStep - tasklet()
     - [ ] TaskletStep - startLimit() / allowStartIfComplete()
     - [ ] TaskletStep 아키텍처
