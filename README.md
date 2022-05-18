@@ -63,7 +63,8 @@
       아키텍처</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/job-step.md">JobStep</a>
 - [ ] 섹션 6. 스프링 배치 실행 - Flow
-    - [ ] FlowJob - 개념 및 API 소개
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/flow-job.md">FlowJob - 개념 및 API
+      소개</a>
     - [ ] FlowJob - start() / next()
     - [ ] Transition - 배치상태 유형 (BatchStatus / ExitStatus / FlowExecutionStatus*)*
     - [ ] Transition - on() / to() / stop(), fail(), end(), stopAndRestart()
