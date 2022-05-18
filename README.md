@@ -49,21 +49,23 @@
       incrementer()</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section04/simple-job.md">SimpleJob
       아키텍처</a>
-- [ ] 섹션 5. 스프링 배치 실행 - Step
+- [x] 섹션 5. 스프링 배치 실행 - Step
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/step-builder-factory.md">
       StepBuilderFactory</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/tasklet-step.md">TaskletStep - 개념
       및 API 소개</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/tasklet-api.md">TaskletStep -
       tasklet()</a>
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/start-limt-allow-start.md">TaskletStep -
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/start-limt-allow-start.md">
+      TaskletStep -
       startLimit() / allowStartIfComplete()</a>
-    - [ ] TaskletStep 아키텍처
-    - [ ] JobStep
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/tasklet-step.md">TaskletStep
+      아키텍처</a>
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/job-step.md">JobStep</a>
 - [ ] 섹션 6. 스프링 배치 실행 - Flow
     - [ ] FlowJob - 개념 및 API 소개
     - [ ] FlowJob - start() / next()
-    - [ ] Transition - 배치상태 유형 (BatchStatus / ExitStatus / FlowExecutionStatus)
+    - [ ] Transition - 배치상태 유형 (BatchStatus / ExitStatus / FlowExecutionStatus*)*
     - [ ] Transition - on() / to() / stop(), fail(), end(), stopAndRestart()
     - [ ] 사용자 정의 ExitStatus
     - [ ] JobExecutionDecider
