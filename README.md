@@ -56,7 +56,8 @@
       및 API 소개</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/tasklet-api.md">TaskletStep -
       tasklet()</a>
-    - [ ] TaskletStep - startLimit() / allowStartIfComplete()
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/start-limt-allow-start.md">TaskletStep -
+      startLimit() / allowStartIfComplete()</a>
     - [ ] TaskletStep 아키텍처
     - [ ] JobStep
 - [ ] 섹션 6. 스프링 배치 실행 - Flow
