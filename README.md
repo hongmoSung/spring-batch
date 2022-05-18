@@ -68,9 +68,11 @@
     - [x] FlowJob - start() / next()
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/status.md">Transition - 배치상태
       유형 (BatchStatus / ExitStatus / FlowExecutionStatus*)*</a>
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/transition.md">Transition - on() /
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/transition.md">Transition - on()
+      /
       to() / stop(), fail(), end(), stopAndRestart()</a>
-    - [ ] 사용자 정의 ExitStatus
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/exit-status.md">사용자 정의
+      ExitStatus</a>
     - [ ] JobExecutionDecider
     - [ ] FlowJob 아키텍처
     - [ ] SimpleFlow - 개념 및 API 소개

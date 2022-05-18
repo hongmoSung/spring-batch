@@ -1,16 +1,11 @@
 package io.springbatch.springbatchlecture.config;
 
 import io.springbatch.springbatchlecture.*;
-import io.springbatch.springbatchlecture.validator.CustomJobParameterValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobExecutionListener;
-import org.springframework.batch.core.Step;
-import org.springframework.batch.core.StepContribution;
+import org.springframework.batch.core.*;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.core.job.DefaultJobParametersValidator;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
@@ -18,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Slf4j
-//@Configuration
+@Configuration
 @RequiredArgsConstructor
 public class JobInstanceConfiguration {
 
@@ -33,8 +28,8 @@ public class JobInstanceConfiguration {
     @Bean
     public Job job() {
         return jobBuilderFactory.get("job1")
-                .start(step1())
-                .next(step2())
+                .start(step11())
+                .next(step12())
 //                .next(step3())
 //                .next(step4())
 //                .listener(jobRepositoryListener)
@@ -46,29 +41,31 @@ public class JobInstanceConfiguration {
     }
 
     @Bean
-    public Step step1() {
-        return stepBuilderFactory.get("step1")
+    public Step step11() {
+        return stepBuilderFactory.get("step11")
                 .tasklet(new Tasklet() {
                     @Override
                     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
+                        contribution.getStepExecution().setExitStatus(ExitStatus.FAILED);
                         return RepeatStatus.FINISHED;
                     }
                 })
-                .allowStartIfComplete(true)
+//                .allowStartIfComplete(true)
                 .build();
     }
 
     @Bean
-    public Step step2() {
-        return stepBuilderFactory.get("step2")
+    public Step step12() {
+        return stepBuilderFactory.get("step12")
                 .tasklet(new Tasklet() {
                     @Override
                     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
-                        throw new RuntimeException("aa");
-//                        return null;
+//                        throw new RuntimeException("aa");
+                        return RepeatStatus.FINISHED;
                     }
                 })
-                .startLimit(3)
+//                .startLimit(3)
+                .listener(new PassCheckingListener())
                 .build();
     }
 
