@@ -78,10 +78,12 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/flow-job2.md">FlowJob 아키텍처</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/simple-flow-api.md">SimpleFlow -
       개념 및 API 소개</a>
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/simple-flow-example.md">SimpleFlow
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/simple-flow-example.md">
+      SimpleFlow
       예제</a>
-    - [ ] SimpleFlow 아키텍처
-    - [ ] FlowStep
+    - [ ] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/simple-flow-example.md">
+      SimpleFlow 아키텍처</a>
+    - [ ] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/flow-step.md">FlowStep</a>
     - [ ] @JobScope / @StepScope - 기본개념 및 설정
     - [ ] @JobScope / @StepScope 아키텍처
 - [ ] 섹션 7. 스프링 배치 청크 프로세스 이해
