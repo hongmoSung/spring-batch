@@ -73,7 +73,8 @@
       to() / stop(), fail(), end(), stopAndRestart()</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/exit-status.md">사용자 정의
       ExitStatus</a>
-    - [ ] JobExecutionDecider
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/job-execution-decider.md">
+      JobExecutionDecider</a>
     - [ ] FlowJob 아키텍처
     - [ ] SimpleFlow - 개념 및 API 소개
     - [ ] SimpleFlow 예제
