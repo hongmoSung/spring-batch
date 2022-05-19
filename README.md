@@ -75,7 +75,7 @@
       ExitStatus</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/job-execution-decider.md">
       JobExecutionDecider</a>
-    - [ ] FlowJob 아키텍처
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/flow-job2.md">FlowJob 아키텍처</a>
     - [ ] SimpleFlow - 개념 및 API 소개
     - [ ] SimpleFlow 예제
     - [ ] SimpleFlow 아키텍처
