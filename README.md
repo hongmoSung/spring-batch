@@ -89,7 +89,7 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/scope-arch.md">@JobScope /
       @StepScope 아키텍처</a>
 - [ ] 섹션 7. 스프링 배치 청크 프로세스 이해
-    - [ ] 목차 소개
+    - [x] 목차 소개
     - [ ] Chunk
     - [ ] ChunkOrientedTasklet - 개념 및 API 소개
     - [ ] ChunkOrientedTasklet - ChunkProvider / ChunkProcessor
