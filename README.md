@@ -62,7 +62,7 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/tasklet-step.md">TaskletStep
       아키텍처</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section05/job-step.md">JobStep</a>
-- [ ] 섹션 6. 스프링 배치 실행 - Flow
+- [x] 섹션 6. 스프링 배치 실행 - Flow
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/flow-job.md">FlowJob - 개념 및 API
       소개</a>
     - [x] FlowJob - start() / next()
@@ -86,7 +86,8 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/flow-step.md">FlowStep</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/scope-basic.md">@JobScope /
       @StepScope - 기본개념 및 설정</a>
-    - [ ] @JobScope / @StepScope 아키텍처
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/scope-arch.md">@JobScope /
+      @StepScope 아키텍처</a>
 - [ ] 섹션 7. 스프링 배치 청크 프로세스 이해
     - [ ] 목차 소개
     - [ ] Chunk
