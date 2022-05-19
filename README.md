@@ -76,7 +76,8 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/job-execution-decider.md">
       JobExecutionDecider</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/flow-job2.md">FlowJob 아키텍처</a>
-    - [ ] SimpleFlow - 개념 및 API 소개
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/simple-flow-api.md">SimpleFlow -
+      개념 및 API 소개</a>
     - [ ] SimpleFlow 예제
     - [ ] SimpleFlow 아키텍처
     - [ ] FlowStep
