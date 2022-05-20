@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Slf4j
-@Configuration
+//@Configuration
 @RequiredArgsConstructor
 public class ChunkOrientedTaskletConfig {
 
@@ -32,7 +32,8 @@ public class ChunkOrientedTaskletConfig {
                 .build();
     }
 
-    private Step Step2() {
+    @Bean
+    public Step Step2() {
         return stepBuilderFactory.get("chunkStep2")
                 .tasklet((contribution, chunkContext) -> {
                     log.info("chunkStep2 has executed");
