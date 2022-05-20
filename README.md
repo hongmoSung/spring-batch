@@ -93,8 +93,10 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section07/chunk.md">Chunk</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section07/chunk-oriented-tasklet.md">
       ChunkOrientedTasklet -개념 및 API 소개</a>
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section07/chunk-provider.md">ChunkOrientedTasklet - ChunkProvider / ChunkProcessor</a>
-    - [ ] ItemReader / ItemWriter / ItemProcessor 이해
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section07/chunk-provider.md">
+      ChunkOrientedTasklet - ChunkProvider / ChunkProcessor</a>
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section07/chunk-process.md">ItemReader /
+      ItemWriter / ItemProcessor 이해</a>
     - [ ] ItemStream
     - [ ] Chunk Process 아키텍처
 - [ ] 섹션 8. 스프링 배치 청크 프로세스 활용 - ItemReader
