@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-@Configuration
+//@Configuration
 @RequiredArgsConstructor
 public class ItemStreamConfig {
 

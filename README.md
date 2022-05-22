@@ -102,7 +102,8 @@
       Process 아키텍처</a>
 - [ ] 섹션 8. 스프링 배치 청크 프로세스 활용 - ItemReader
     - [x] 목차 소개
-    - [ ] FlatFileItemReader - 개념 및 API 소개
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section08/flat-file-item-reader.md">
+      FlatFileItemReader - 개념 및 API 소개</a>
     - [ ] FlatFileItemReader - delimetedlinetokenizer
     - [ ] FlatFileItemReader - fixedlengthtokenizer
     - [ ] FlatFileItemReader - Exception Handling
