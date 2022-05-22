@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Arrays;
 
 @Slf4j
-@Configuration
+//@Configuration
 @RequiredArgsConstructor
 public class ItemReaderWriterProcessorConfig {
 
