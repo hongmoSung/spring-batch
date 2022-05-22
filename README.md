@@ -88,7 +88,7 @@
       @StepScope - 기본개념 및 설정</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section06/scope-arch.md">@JobScope /
       @StepScope 아키텍처</a>
-- [ ] 섹션 7. 스프링 배치 청크 프로세스 이해
+- [x] 섹션 7. 스프링 배치 청크 프로세스 이해
     - [x] 목차 소개
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section07/chunk.md">Chunk</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section07/chunk-oriented-tasklet.md">
@@ -98,7 +98,8 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section07/chunk-process.md">ItemReader /
       ItemWriter / ItemProcessor 이해</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section07/item-stream.md">ItemStream</a>
-    - [ ] Chunk Process 아키텍처
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section07/chunk-process-arch.md">Chunk
+      Process 아키텍처</a>
 - [ ] 섹션 8. 스프링 배치 청크 프로세스 활용 - ItemReader
     - [ ] 목차 소개
     - [ ] FlatFileItemReader - 개념 및 API 소개
