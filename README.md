@@ -127,10 +127,12 @@
     - [ ] XML StaxEventItemWriter
     - [ ] JsonFileItemWriter
     - [ ] DB - JdbcBatchItemWriter
-    - [ ] DB - JpaItemWriter
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section09/jpa-item-writer.md">DB -
+      JpaItemWriter</a>
     - [ ] ItemWriterAdapter
 - [ ] 섹션 10. 스프링 배치 청크 프로세스 활용 - ItemProcessor
-    - [ ] CompositeItemProcessor
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section10/composeite-item-processor.md">
+      CompositeItemProcessor</a>
     - [ ] ClassifierCompositeItemProcessor
 - [ ] 섹션 11. 스프링 배치 반복 및 오류 제어
     - [ ] 목차 소개
