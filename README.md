@@ -130,10 +130,11 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section09/jpa-item-writer.md">DB -
       JpaItemWriter</a>
     - [ ] ItemWriterAdapter
-- [ ] 섹션 10. 스프링 배치 청크 프로세스 활용 - ItemProcessor
+- [x] 섹션 10. 스프링 배치 청크 프로세스 활용 - ItemProcessor
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section10/composeite-item-processor.md">
       CompositeItemProcessor</a>
-    - [ ] ClassifierCompositeItemProcessor
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section10/classifier-composite-Item-processor.md">
+      ClassifierCompositeItemProcessor</a>
 - [ ] 섹션 11. 스프링 배치 반복 및 오류 제어
     - [ ] 목차 소개
     - [ ] Repeat
