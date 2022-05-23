@@ -135,7 +135,7 @@
       CompositeItemProcessor</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section10/classifier-composite-Item-processor.md">
       ClassifierCompositeItemProcessor</a>
-- [ ] 섹션 11. 스프링 배치 반복 및 오류 제어
+- [x] 섹션 11. 스프링 배치 반복 및 오류 제어
     - [ ] 목차 소개
     - [ ] Repeat
     - [ ] FaultTolerant
