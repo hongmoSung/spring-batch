@@ -6,9 +6,11 @@ import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.database.builder.JpaCursorItemReaderBuilder;
+import org.springframework.batch.item.database.builder.JpaItemWriterBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -36,10 +38,16 @@ public class JpaCursorConfig {
     @Bean
     public Step jpaStep1() {
         return stepBuilderFactory.get("jpaStep1")
-                .<CustomerEntity, CustomerEntity>chunk(chunkSize)
+                .<CustomerEntity, Customer2>chunk(chunkSize)
                 .reader(customerItemReader())
+                .processor(customItemProcessor())
                 .writer(customItermWriter())
                 .build();
+    }
+
+    @Bean
+    public ItemProcessor<? super CustomerEntity, ? extends Customer2> customItemProcessor() {
+        return new CustomItemProcessor2();
     }
 
     @Bean
@@ -57,12 +65,11 @@ public class JpaCursorConfig {
     }
 
     @Bean
-    public ItemWriter<CustomerEntity> customItermWriter() {
-        return items -> {
-            for (CustomerEntity item : items) {
-                log.info(item.toString());
-            }
-        };
+    public ItemWriter<Customer2> customItermWriter() {
+        return new JpaItemWriterBuilder<Customer2>()
+                .usePersist(true)
+                .entityManagerFactory(entityManagerFactory)
+                .build();
     }
 
 }
