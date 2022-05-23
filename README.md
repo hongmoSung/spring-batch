@@ -110,7 +110,7 @@
     - [ ] XML StaxEventItemReader - 개념 및 API 소개
     - [ ] XML StaxEventItemReader -예제
     - [ ] JsonItemReader
-    - [ ] DB - Cursor & Paging 이해
+    - [x] DB - Cursor & Paging 이해
     - [ ] DB - JdbcCursorItemReader
     - [ ] DB - JpaCursorItemReader
     - [ ] DB - JdbcPagingItemReader
