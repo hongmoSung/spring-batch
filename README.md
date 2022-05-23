@@ -118,7 +118,8 @@
       JpaCursorItemReader</a>
     - [ ] DB - JdbcPagingItemReader
     - [ ] DB - JpaPagingItemReader
-    - [ ] ItemReaderAdapter
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section08/item-reader-adapter.md">
+      ItemReaderAdapter</a>
 - [ ] 섹션 9. 스프링 배치 청크 프로세스 활용 - ItemWriter
     - [ ] FlatFileItemWriter - 개념 및 API 소개
     - [ ] FlatFileItemWriter - delimeted
