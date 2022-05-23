@@ -110,8 +110,10 @@
     - [ ] XML StaxEventItemReader - 개념 및 API 소개
     - [ ] XML StaxEventItemReader -예제
     - [ ] JsonItemReader
-    - [x] DB - Cursor & Paging 이해
-    - [ ] DB - JdbcCursorItemReader
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section08/cursor-and-paging.md">DB - Cursor
+      & Paging 이해</a>
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section08/jdbc-cursor-item-reader.md">DB -
+      JdbcCursorItemReader</a>
     - [ ] DB - JpaCursorItemReader
     - [ ] DB - JdbcPagingItemReader
     - [ ] DB - JpaPagingItemReader

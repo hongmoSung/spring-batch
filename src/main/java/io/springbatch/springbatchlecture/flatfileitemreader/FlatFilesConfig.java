@@ -18,7 +18,7 @@ import org.springframework.core.io.ClassPathResource;
 import java.util.List;
 
 @Slf4j
-@Configuration
+//@Configuration
 @RequiredArgsConstructor
 public class FlatFilesConfig {
 
