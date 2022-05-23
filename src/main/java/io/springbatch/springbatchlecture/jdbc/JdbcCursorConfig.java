@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 @Slf4j
-@Configuration
+//@Configuration
 @RequiredArgsConstructor
 public class JdbcCursorConfig {
 

@@ -114,7 +114,8 @@
       & Paging 이해</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section08/jdbc-cursor-item-reader.md">DB -
       JdbcCursorItemReader</a>
-    - [ ] DB - JpaCursorItemReader
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section08/jpa-cursor-item-reader.md">DB -
+      JpaCursorItemReader</a>
     - [ ] DB - JdbcPagingItemReader
     - [ ] DB - JpaPagingItemReader
     - [ ] ItemReaderAdapter
