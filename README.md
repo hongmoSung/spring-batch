@@ -138,8 +138,8 @@
 - [ ] 섹션 11. 스프링 배치 반복 및 오류 제어
     - [x] 목차 소개
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section11/repeat.md">Repeat</a>
-    - [ ] FaultTolerant
-    - [ ] Skip
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section11/fault-tolerant.md">FaultTolerant</a>
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section11/skip.md">Skip</a>
     - [ ] Retry (1)
     - [ ] Retry (2)
     - [ ] Retry (3)
