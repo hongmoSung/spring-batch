@@ -140,7 +140,7 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section11/repeat.md">Repeat</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section11/fault-tolerant.md">FaultTolerant</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section11/skip.md">Skip</a>
-    - [ ] Retry (1)
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section11/retry.md">Retry (1)</a>
     - [ ] Retry (2)
     - [ ] Retry (3)
     - [ ] Skip & Retry 아키텍처
