@@ -5,9 +5,15 @@ import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.step.skip.LimitCheckingItemSkipPolicy;
+import org.springframework.batch.core.step.skip.NeverSkipItemSkipPolicy;
+import org.springframework.batch.core.step.skip.SkipPolicy;
 import org.springframework.batch.item.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Configuration
 @RequiredArgsConstructor
@@ -41,7 +47,15 @@ public class SkipConfig {
                 .faultTolerant()
                 .skip(SkippableException.class)
                 .skipLimit(4)
+                .skipPolicy(new NeverSkipItemSkipPolicy())
                 .build();
+    }
+
+    @Bean
+    public SkipPolicy limitCheckingItemSkipPolicy() {
+        Map<Class<? extends Throwable>, Boolean> exceptionClass = new HashMap<>();
+        exceptionClass.put(SkippableException.class, true);
+        return new LimitCheckingItemSkipPolicy(3, exceptionClass);
     }
 
     @Bean
