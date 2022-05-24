@@ -147,7 +147,7 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section11/skip-and-retry-arch.md">Skip &
       Retry 아키텍처</a>
 - [ ] 섹션 12. 스프링 배치 멀티 스레드 프로세싱
-    - [ ] 기본 개념
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section12/basic-concep.md">기본 개념</a>
     - [ ] AsyncItemProcessor / AsyncItemWriter
     - [ ] Multi-threaded Step
     - [ ] Partitioning (1)
