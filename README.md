@@ -152,6 +152,7 @@
       AsyncItemProcessor / AsyncItemWriter</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section12/multi-threaded-step.md">
       Multi-threaded Step</a>
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section12/parallel-steps.md">Parallel Steps</a>
     - [ ] Partitioning (1)
     - [ ] Partitioning (2)
     - [ ] SynchronizedItemStreamReader
