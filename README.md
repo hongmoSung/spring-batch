@@ -156,7 +156,7 @@
       Steps</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section12/partitioning.md">Partitioning (
       1)</a>
-    - [ ] Partitioning (2)
+    - [x] Partitioning (2)
     - [ ] SynchronizedItemStreamReader
 - [ ] 섹션 13. 스프링 배치 이벤트 리스너
     - [ ] 기본개념
