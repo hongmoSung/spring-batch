@@ -1,5 +1,6 @@
-package io.springbatch.springbatchlecture.async;
+package io.springbatch.springbatchlecture.multithread;
 
+import io.springbatch.springbatchlecture.async.StopWatchJobListener;
 import io.springbatch.springbatchlecture.jdbc.Customer;
 import io.springbatch.springbatchlecture.jdbc.CustomerRowMapper;
 import lombok.RequiredArgsConstructor;
@@ -9,7 +10,6 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.integration.async.AsyncItemProcessor;
-import org.springframework.batch.integration.async.AsyncItemWriter;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
 import org.springframework.batch.item.database.JdbcBatchItemWriter;
@@ -19,74 +19,51 @@ import org.springframework.batch.item.database.support.MySqlPagingQueryProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
+import org.springframework.core.task.TaskExecutor;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
 
-//@Configuration
+@Configuration
 @RequiredArgsConstructor
-public class AsyncConfig {
+public class MultiThreadStepConfig {
 
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
     private final DataSource dataSource;
 
     @Bean
-    public Job asyncJob() throws InterruptedException {
-        return jobBuilderFactory.get("asyncJob")
+    public Job multiThreadJob() {
+        return jobBuilderFactory.get("multiThreadJob")
                 .incrementer(new RunIdIncrementer())
-//                .start(testStep())
-                .start(asyncStep())
+                .start(multiThreadStep())
                 .listener(new StopWatchJobListener())
                 .build();
     }
 
     @Bean
-    public Step testStep() throws InterruptedException {
-        return stepBuilderFactory.get("testStep")
+    public Step multiThreadStep() {
+        return stepBuilderFactory.get("multiThreadStep")
                 .<Customer, Customer>chunk(100)
                 .reader(pagingItemReader())
-                .processor(customItemProcessor())
+                .listener(new MultiItemReadListener())
+                .processor((ItemProcessor < Customer, Customer >) item -> item)
+                .listener(new MultiItemProcessListener())
                 .writer(customItemWriter())
+                .listener(new MultiItemWriterListener())
+                .taskExecutor(taskExecutor())
                 .build();
     }
 
     @Bean
-    public ItemProcessor<Customer, Customer> customItemProcessor() throws InterruptedException {
-        return new ItemProcessor<Customer, Customer>() {
-            @Override
-            public Customer process(Customer item) throws Exception {
-                Thread.sleep(100);
-                return new Customer(item.getId(), item.getFirstName().toUpperCase(), item.getLastName().toUpperCase(),
-                        item.getBirthdate());
-            }
-        };
-    }
-
-    @Bean
-    public Step asyncStep() throws InterruptedException {
-        return stepBuilderFactory.get("asyncStep")
-                .<Customer, Customer>chunk(100)
-                .reader(pagingItemReader())
-                .processor(asyncItemProcessor())
-                .writer(asyncItemWriter())
-                .build();
-    }
-
-    @Bean
-    public AsyncItemWriter asyncItemWriter() {
-        AsyncItemWriter<Customer> asyncItemWriter = new AsyncItemWriter();
-        asyncItemWriter.setDelegate(customItemWriter());
-        return asyncItemWriter;
-    }
-
-    @Bean
-    public ItemProcessor asyncItemProcessor() throws InterruptedException {
-        AsyncItemProcessor<Customer, Customer> asyncItemProcessor = new AsyncItemProcessor<>();
-        asyncItemProcessor.setDelegate(customItemProcessor());
-        asyncItemProcessor.setTaskExecutor(new SimpleAsyncTaskExecutor());
-        return asyncItemProcessor;
+    public TaskExecutor taskExecutor() {
+        ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
+        taskExecutor.setCorePoolSize(4);
+        taskExecutor.setMaxPoolSize(8);
+        taskExecutor.setThreadNamePrefix("async-thread");
+        return taskExecutor;
     }
 
     @Bean
@@ -117,4 +94,26 @@ public class AsyncConfig {
         itemWriter.afterPropertiesSet();
         return itemWriter;
     }
+
+    @Bean
+    public ItemProcessor<Customer, java.util.concurrent.Future<Customer>> asyncItemProcessor() throws InterruptedException {
+        AsyncItemProcessor<Customer, Customer> asyncItemProcessor = new AsyncItemProcessor<>();
+        asyncItemProcessor.setDelegate(customItemProcessor());
+        asyncItemProcessor.setTaskExecutor(new SimpleAsyncTaskExecutor());
+        return asyncItemProcessor;
+    }
+
+    @Bean
+    public ItemProcessor<Customer, Customer> customItemProcessor() throws InterruptedException {
+        return new ItemProcessor<Customer, Customer>() {
+            @Override
+            public Customer process(Customer item) throws Exception {
+                Thread.sleep(100);
+                return new Customer(item.getId(), item.getFirstName().toUpperCase(), item.getLastName().toUpperCase(),
+                        item.getBirthdate());
+            }
+        };
+    }
+
+
 }
