@@ -146,7 +146,7 @@
     - [x] Retry (3)
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section11/skip-and-retry-arch.md">Skip &
       Retry 아키텍처</a>
-- [ ] 섹션 12. 스프링 배치 멀티 스레드 프로세싱
+- [x] 섹션 12. 스프링 배치 멀티 스레드 프로세싱
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section12/basic-concep.md">기본 개념</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section12/async-item-processor-writer.md">
       AsyncItemProcessor / AsyncItemWriter</a>
@@ -160,7 +160,7 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section12/synchronized-item-stream.md">
       SynchronizedItemStreamReader</a>
 - [ ] 섹션 13. 스프링 배치 이벤트 리스너
-    - [ ] 기본개념
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/listener.md">기본개념</a>`
     - [ ] JobExecutionListener / StepExecutionListener
     - [ ] ChunkListener / ItemReadListener /ItemProcessListener /ItemWriteListener
     - [ ] SkipListener & RetryListener
