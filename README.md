@@ -159,7 +159,7 @@
     - [x] Partitioning (2)
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section12/synchronized-item-stream.md">
       SynchronizedItemStreamReader</a>
-- [ ] 섹션 13. 스프링 배치 이벤트 리스너
+- [x] 섹션 13. 스프링 배치 이벤트 리스너
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/listener.md">기본개념</a>`
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/job-and-step-listener.md">
       JobExecutionListener / StepExecutionListener</a>
