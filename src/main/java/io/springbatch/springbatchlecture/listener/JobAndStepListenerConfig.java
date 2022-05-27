@@ -24,7 +24,8 @@ public class JobAndStepListenerConfig {
                 .incrementer(new RunIdIncrementer())
                 .start(listenerStep1())
                 .next(listenerStep2())
-                .listener(new CustomJobExecutionListener())
+//                .listener(new CustomJobExecutionListener())
+                .listener(new CustomAnnotationJobExecutionListener())
                 .build();
     }
 
