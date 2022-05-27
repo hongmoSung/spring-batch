@@ -6,49 +6,47 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
-import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
-import org.springframework.batch.item.support.ListItemReader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
-//@Configuration
+@Configuration
 @RequiredArgsConstructor
-public class ChunkListenerConfig {
+public class RetryListenerConfig {
 
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
 
     @Bean
-    public Job chunkListenerJob() {
-        return jobBuilderFactory.get("chunkListenerJob")
+    public Job retryJob() {
+        return jobBuilderFactory.get("retryJob")
                 .incrementer(new RunIdIncrementer())
-                .start(chunkStep1())
+                .start(retryStep())
                 .build();
     }
 
     @Bean
-    public Step chunkStep1() {
-        return stepBuilderFactory.get("chunkStep1")
+    public Step retryStep() {
+        return stepBuilderFactory.get("retryStep")
                 .<Integer, String>chunk(10)
-                .listener(new CustomChunkListener())
-                .listener(new CustomItemReadListener())
-                .listener(new CustomItemProcessListener())
-                .listener(new CustomItemWriterListener())
                 .reader(listItemReader())
-                .processor((ItemProcessor<? super Integer, ? extends String>) item -> "item" + item)
-                .writer(items -> {
-                    System.out.println("items = " + items);
-                })
+                .processor(new RetryItemProcessor())
+                .writer(new RetryItemWriter())
+                .faultTolerant()
+                .retry(CustomRetryException.class)
+                .retryLimit(2)
+                .listener(new CustomRetryListener())
                 .build();
     }
 
     @Bean
     public ItemReader<Integer> listItemReader() {
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        return new ListItemReader<>(list);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4);
+        return new LinkedListItemReader2<>(list);
     }
+
 }

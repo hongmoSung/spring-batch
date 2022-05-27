@@ -9,6 +9,7 @@ import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.support.ListItemReader;
+import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,14 +18,14 @@ import java.util.List;
 
 //@Configuration
 @RequiredArgsConstructor
-public class ChunkListenerConfig {
+public class SkipListenerConfig {
 
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
 
     @Bean
-    public Job chunkListenerJob() {
-        return jobBuilderFactory.get("chunkListenerJob")
+    public Job skipListenerJob() {
+        return jobBuilderFactory.get("skipListenerJob")
                 .incrementer(new RunIdIncrementer())
                 .start(chunkStep1())
                 .build();
@@ -39,10 +40,24 @@ public class ChunkListenerConfig {
                 .listener(new CustomItemProcessListener())
                 .listener(new CustomItemWriterListener())
                 .reader(listItemReader())
-                .processor((ItemProcessor<? super Integer, ? extends String>) item -> "item" + item)
-                .writer(items -> {
-                    System.out.println("items = " + items);
+                .processor((ItemProcessor<? super Integer, ? extends String>) item -> {
+                    if (item == 4) {
+                        throw new CustomSkipException("process skipped");
+                    }
+                    return "item" + item;
                 })
+                .writer(items -> {
+                    for (String item : items) {
+                        if (item.equals("5")) {
+                            throw new CustomSkipException("write skipped");
+                        }
+                        System.out.println("item = " + item);
+                    }
+                })
+                .faultTolerant()
+                .skip(CustomSkipException.class)
+                .skipLimit(2)
+                .listener(new CustomSkipListener())
                 .build();
     }
 

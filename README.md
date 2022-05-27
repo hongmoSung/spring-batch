@@ -165,7 +165,8 @@
       JobExecutionListener / StepExecutionListener</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/job-and-step-listeners.md">
       ChunkListener / ItemReadListener /ItemProcessListener /ItemWriteListener</a>
-    - [ ] SkipListener & RetryListener
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/skip-retry-listener.md">
+      SkipListener & RetryListener</a>
 - [ ] 섹션 14. 스프링 배치 테스트 및 운영
     - [ ] Spring Batch Test
     - [ ] JobExplorer / JobRegistry / JobOperator
