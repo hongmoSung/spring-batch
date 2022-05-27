@@ -161,8 +161,10 @@
       SynchronizedItemStreamReader</a>
 - [ ] 섹션 13. 스프링 배치 이벤트 리스너
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/listener.md">기본개념</a>`
-    - [ ] JobExecutionListener / StepExecutionListener
-    - [ ] ChunkListener / ItemReadListener /ItemProcessListener /ItemWriteListener
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/job-and-step-listener.md">
+      JobExecutionListener / StepExecutionListener</a>
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/job-and-step-listeners.md">
+      ChunkListener / ItemReadListener /ItemProcessListener /ItemWriteListener</a>
     - [ ] SkipListener & RetryListener
 - [ ] 섹션 14. 스프링 배치 테스트 및 운영
     - [ ] Spring Batch Test
