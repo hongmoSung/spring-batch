@@ -30,7 +30,7 @@
       ExecutionContext</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobRepository.md">
       JobRepository</a>
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobLauncher.md.md">
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section03/jobLauncher.md">
       JobLauncher</a>
 - [x] 섹션 4. 스프링 배치 실행 - Job
     - [x] 목차 소개
@@ -160,7 +160,7 @@
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section12/synchronized-item-stream.md">
       SynchronizedItemStreamReader</a>
 - [x] 섹션 13. 스프링 배치 이벤트 리스너
-    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/listener.md">기본개념</a>`
+    - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/listener.md">기본개념</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/job-and-step-listener.md">
       JobExecutionListener / StepExecutionListener</a>
     - [x] <a href="https://github.com/hongmoSung/spring-batch/blob/main/docs/section13/job-and-step-listeners.md">
